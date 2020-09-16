@@ -1,0 +1,27 @@
+{
+  "name": "sockets-test",
+  "private": true,
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0"
+  },
+  "devDependencies": {
+    "husky": "^4.3.0",
+    "lint-staged": "^10.3.0",
+    "nodemon": "^2.0.4",
+    "prettier": "^2.1.1"
+  },
+  "lint-staged": {
+    "./**/*.{js,json}": [
+      "prettier --write"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
+}
